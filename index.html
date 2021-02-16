@@ -1,48 +1,62 @@
 <!DOCTYPE html>
-<html lang="en-US" class="page">
+<html lang="en-US">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     <title>CV - Petr Podovalov</title>
 </head>
-<body>
-    <h1>Petr Podovalov</h1>
-    <section class="">
-        <h2>Contacts</h2>
-        <ul>
-            <li>Email: <a href="mailto: petrr.osetrr@gmail.com" >petrr.osetrr@gmail.com</a></li>
-            <li>Telegram: <a href="https://t.me/petrrosetrr" title="telegram link">@petrrosetrr</a></li>
-        </ul>
-    </section>
-    <section>
-        <h2>Code examples</h2>
-        <a href="https://github.com/petrrosetrr/1175637-cat-energy-20">Cat energy HTML Academy project</a>
-    </section>
-    <section>
-        <h2>Languages</h2>
-        <ul>
-            <li>English: A2 - B1(I'm not sure)</li>
-            <li>Deutsch: A2 (Goethe zertifikat)</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Summary</h2>
-        <p>Summary</p>
-    </section>
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML & CSS & SCSS</li>
-            <li>Javascript basics</li>
-            <li>C language</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li>Student of <a href="https://21-school.ru">School 21</a> in Kazan</li>
-            <li><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a> advanced front end course</li>
-        </ul>
-    </section>
+<body class="page">
+    <div class="page__column page__column_left">
+        <div class="header page__header">
+            <img class="photo header__photo" src="imgs/profile_pic.jpg" alt="default" width="350" height="350">
+            <h1 class="header__name"><span class="header__surname">Petr</span><br>Podovalov</h1>
+            <span class="header__subtitle">Software developer</span>
+        </div>
+        <section class="contacts page__contacts">
+            <h2 class="visually-hidden">Contacts</h2>
+            <ul class="contacts__list">
+                <li class="contacts__item"><a href="mailto: petrr.osetrr@gmail.com" >petrr.osetrr@gmail.com</a></li>
+                <li class="contacts__item"><a href="https://t.me/petrrosetrr" title="telegram link">@petrrosetrr</a></li>
+                <li class="contacts__item"><a href="https://https://github.com/petrrosetrr" title="github link">github.com/petrrosetrr</a></li>
+                <li class="contacts__item"><a href="https://www.google.com/maps/place/Kazan,+Republic+of+Tatarstan">Kazan</a></li>
+            </ul>
+        </section>
+        <section class="languages page__languages">
+            <h2 class="cv-block__heading">Languages</h2>
+            <ul class="cv-block__list">
+                <li>English: A2 - B1(I'm not sure)</li>
+                <li>Deutsch: A2 (Goethe zertifikat)</li>
+            </ul>
+        </section>
+    </div>
+    <div class="page__column page__column_right">
+        <section class="cv-block">
+            <h2 class="cv-block__heading">Code examples</h2>
+            <a class="link" href="https://github.com/petrrosetrr/1175637-cat-energy-20">Cat energy HTML Academy project</a>
+        </section>
+        <section class="cv-block">
+            <h2 class="cv-block__heading">Summary</h2>
+            <p>Summary</p>
+        </section>
+        <section class="cv-block">
+            <h2 class="cv-block__heading">Skills</h2>
+            <ul class="cv-block__list">
+                <li>HTML & CSS & SCSS</li>
+                <li>Javascript basics</li>
+                <li>C language</li>
+            </ul>
+        </section>
+        <section class="cv-block">
+            <h2 class="cv-block__heading">Education</h2>
+            <ul class="cv-block__list">
+                <li>Student of <a href="https://21-school.ru">School 21</a> in Kazan</li>
+                <li><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a> advanced front end course</li>
+            </ul>
+        </section>
+    </div>
 </body>
 </html>

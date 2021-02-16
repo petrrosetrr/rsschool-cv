@@ -1,0 +1,116 @@
+
+html {
+    height: 100vh;
+    width: 100vw;
+}
+
+.page {
+    background-image: linear-gradient(180deg, rgba(3, 56, 244, 0.71) 0%, rgba(224, 37, 203, 0.79) 93.75%);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    gap: 20px;
+    padding: 10px 20px 10px;
+    font-family: Montserrat, Arial, serif;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.page__column
+{
+    border-radius: 10px;
+    min-width: 300px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
+    flex-shrink: 1;
+    flex-basis: 500px;
+}
+
+.page__column_left
+{
+    background-color: rgba(196, 196, 196, 0.3);
+    padding: 15px 25px 45px;
+}
+
+.page__column_right
+{
+    background-color: rgb(255, 254, 250);
+    padding: 19px 14px 45px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+.header {
+    display: grid;
+    grid-template-areas:
+    "photo title"
+    "photo subtitle";
+    grid-template-columns: 0.9fr 1fr;
+    grid-template-rows: min-content min-content;
+    grid-column-gap: 20px;
+}
+.page__header {
+    margin-bottom: 30px;
+}
+.header__name {
+    grid-area: title;
+    align-self: end;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 120%;
+    color: #FFFFFF;
+}
+.header__surname {
+    font-size: 30px;
+    line-height: 1em;
+    color: #CECACA;
+}
+.header__subtitle {
+    align-self: start;
+    grid-area: subtitle;
+    font-size: 20px;
+    line-height: 1em;
+    color: #CECACA;
+}
+.header__photo {
+    grid-area: photo;
+}
+.photo {
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+.contacts__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacts__item > a {
+    font-size: 20px;
+    line-height: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 70px;
+    height: 45px;
+    background:  rgba(196, 196, 196, 0.35);
+    border-radius: 10px;
+}
+
+.page__contacts {
+    margin-bottom: 20px;
+}
