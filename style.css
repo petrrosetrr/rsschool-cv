@@ -1,22 +1,23 @@
-
 html {
     height: 100vh;
-    width: 100vw;
+    min-width: 800px;
 }
 
 .page {
-    background-image: linear-gradient(180deg, rgba(3, 56, 244, 0.71) 0%, rgba(224, 37, 203, 0.79) 93.75%);
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    gap: 20px;
     padding: 10px 20px 10px;
-    font-family: Montserrat, Arial, serif;
+    background-repeat: no-repeat;
     font-weight: normal;
+    font-family: Montserrat, Arial, serif;
     font-size: 25px;
     line-height: 30px;
+    background-image: linear-gradient(180deg, rgba(3, 56, 244, 0.71) 0%, rgba(224, 37, 203, 0.79) 93.75%);
+}
+
+.page__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-grow: 1;
 }
 
 .page__column
@@ -26,6 +27,8 @@ html {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
     flex-shrink: 1;
     flex-basis: 500px;
+    display: flex;
+    flex-direction: column;
 }
 
 .page__column_left
@@ -50,6 +53,7 @@ html {
     clip: rect(0, 0, 0, 0);
     overflow: hidden;
 }
+
 .header {
     display: grid;
     grid-template-areas:
@@ -59,9 +63,11 @@ html {
     grid-template-rows: min-content min-content;
     grid-column-gap: 20px;
 }
+
 .page__header {
     margin-bottom: 30px;
 }
+
 .header__name {
     grid-area: title;
     align-self: end;
@@ -70,11 +76,13 @@ html {
     line-height: 120%;
     color: #FFFFFF;
 }
+
 .header__surname {
     font-size: 30px;
     line-height: 1em;
     color: #CECACA;
 }
+
 .header__subtitle {
     align-self: start;
     grid-area: subtitle;
@@ -82,9 +90,11 @@ html {
     line-height: 1em;
     color: #CECACA;
 }
+
 .header__photo {
     grid-area: photo;
 }
+
 .photo {
     border-radius: 50%;
     box-sizing: border-box;
@@ -100,17 +110,154 @@ html {
 }
 
 .contacts__item > a {
+    position: relative;
     font-size: 20px;
     line-height: 20px;
     color: white;
     display: flex;
     align-items: center;
-    padding: 10px 10px 10px 70px;
+    padding: 10px 10px 10px 60px;
     height: 45px;
     background:  rgba(196, 196, 196, 0.35);
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.contacts__item > a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 15px;
+    top: calc(50% - 14px);
+    bottom: 0;
+    background-position: center;
+    background-size: 28px 28px;
+    width: 30px;
+    height: 30px;
+}
+
+.contacts__item_email > a::before {
+    background-image: url("imgs/mdi_mail.svg");
+
+}
+
+.contacts__item_tg > a::before {
+    background-image: url("imgs/uil_telegram.svg");
+
+}
+
+.contacts__item_gh > a::before {
+    background-image: url("imgs/website.svg");
+
+}
+
+.contacts__item_city > a::before {
+    background-image: url("imgs/mdi_location_on.svg");
+
 }
 
 .page__contacts {
     margin-bottom: 20px;
+}
+
+.page__info-block {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: rgba(196, 196, 196, 0.35);
+    padding: 10px 21px 15px;
+    color: #FAFAFA;
+}
+
+.page__block-title {
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 1.29em;
+    margin-bottom: 10px;
+    color: #FAFAFA;
+}
+
+.page__block-list {
+    font-size: 20px;
+}
+
+.page__block-list > * + * {
+    margin-top: 10px;
+}
+
+.expertise__item {
+    position: relative;
+}
+
+.expertise__item::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    left: -11px;
+    top: calc(50% - 3px);
+}
+
+.hobbies {
+    padding-right: 10px;
+
+}
+
+.hobbies__title {
+    display: inline-block;
+    padding: 7px 14px;
+    background-color: rgba(196, 196, 196, 0.35);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.hobbies__list {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100px;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1em;
+    color: #E5E5E5;
+}
+
+.hobbies__item {
+    display: block;
+    position: relative;
+    padding-top: calc(37px * 1.5 + 10px);
+
+}
+
+.hobbies__item::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: calc(35px * 1.5) calc(37px * 1.5);
+    background-position: center;
+    width: 100%;
+    height: calc(37px * 1.5);
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.hobbies__item_reading::before {
+    background-image: url("imgs/reading_img.svg");
+}
+
+.hobbies__item_dance::before {
+    background-image: url("imgs/dance_img.svg");
+}
+
+.hobbies__item_singing::before {
+    background-image: url("imgs/singing_img.svg");
+}
+
+.hobbies__item_football::before {
+    background-image: url("imgs/football_img.svg");
 }
