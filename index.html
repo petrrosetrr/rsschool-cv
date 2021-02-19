@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>CV - Petr Podovalov</title>
@@ -54,29 +55,57 @@
             </section>
         </div>
         <div class="page__column page__column_right">
-            <section class="cv-block">
-                <h2 class="cv-block__heading">Code examples</h2>
-                <a class="link" href="https://github.com/petrrosetrr/1175637-cat-energy-20">Cat energy HTML Academy project</a>
-            </section>
-            <section class="cv-block">
-                <h2 class="cv-block__heading">Summary</h2>
-                <p>Summary</p>
-            </section>
-            <section class="cv-block">
-                <h2 class="cv-block__heading">Skills</h2>
-                <ul class="cv-block__list">
-                    <li>HTML & CSS & SCSS</li>
-                    <li>Javascript basics</li>
-                    <li>C language</li>
+            <section class="page__info-block_right education">
+                <h2 class="page__block-title page__block-title_black-bg">Education</h2>
+                <ul class="education__list">
+                    <li class="education__item">Student of <a href="https://21-school.ru">School 21</a> in Kazan</li>
+                    <li class="education__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a> advanced front end course</li>
                 </ul>
             </section>
-            <section class="cv-block">
-                <h2 class="cv-block__heading">Education</h2>
-                <ul class="cv-block__list">
-                    <li>Student of <a href="https://21-school.ru">School 21</a> in Kazan</li>
-                    <li><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a> advanced front end course</li>
+            <section class="code-examples page__info-block_right">
+                <h2 class="page__block-title page__block-title_black-bg">Code examples</h2>
+                <ul class="code-examples__list">
+                    <li>
+                        <a class="link code-examples__item" href="https://github.com/petrrosetrr/1175637-cat-energy-20">
+                            <span class="code-examples__title">Cat energy</span>
+                            <span class="code-examples__subtitle"> HTML Academy project</span>
+                            <p class="code-examples__description">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            </p>
+                        </a>
+                    </li>
                 </ul>
             </section>
+            <section class="page__info-block_right summary">
+                <h2 class="page__block-title page__block-title_black-bg">Summary</h2>
+                <p class="summary__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur culpa explicabo odio placeat possimus similique tempore voluptatibus</p>
+            </section>
+            <section class="skills">
+                <h2 class="page__block-title page__block-title_black-bg">My skills</h2>
+                <ul class="skills__list">
+                    <li class="skills__item">
+                        <span class="diagram diagram_html"></span>
+                        HTML
+                    </li>
+                    <li class="skills__item">
+                        <span class="diagram diagram_css"></span>
+                        CSS
+                    </li>
+                    <li class="skills__item">
+                        <span class="diagram diagram_scss"></span>
+                        SCSS
+                    </li>
+                    <li class="skills__item">
+                        <span class="diagram diagram_gulp"></span>
+                        Gulp
+                    </li>
+                    <li class="skills__item">
+                        <span class="diagram diagram_js"></span>
+                        Javascript
+                    </li>
+                </ul>
+            </section>
+
         </div>
     </div>
 </body>
